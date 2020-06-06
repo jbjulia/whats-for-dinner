@@ -45,7 +45,7 @@ function generateMeal() {
         "beef": {
             1: "beef stew",
             2: "beef and broccoli",
-            3: "burger"
+            3: "burgers"
         },
         "chicken": {
             1: "fried chicken",
@@ -71,6 +71,10 @@ function generateMeal() {
         document.getElementById("meal").textContent = meals[food][randInt];
         document.getElementById("meal").style.textTransform = "capitalize";
         document.getElementById("highlight-clean").style.visibility = "visible";
+
+        // window.scrollTo(0,document.body.scrollHeight);
+        const elem = document.getElementById("highlight-clean");
+        elem.scrollIntoView();
     }
 }
 
